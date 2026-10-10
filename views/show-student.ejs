@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5" style="width: 650px;">
+        <div class="card shadow rounded-4 border-4">
+            <div class="card-body">
+                <div class="text-center text-primary">
+                    <h3>Detail of Student</h3>
+
+                </div>
+                <div>
+                    <strong>First Name:</strong> <%= student.fname %><br /><br />
+                    <strong>Last Name:</strong> <%= student.lname %><br /><br />
+                    <strong>Email Id:</strong> <%= student.email %><br /><br />
+                    <strong>Mob Number:</strong> <%= student.phone %><br /><br />
+                    <strong>Address:</strong> <%= student.address %><br /><br />
+                    
+                </div>
+                <div>
+                    <a class="btn btn-primary" href="/">View All</a>
+                    <a class="btn btn-secondary" href="/add-student">Add New </a>
+                    <a class="btn btn-danger" href="/delete-student/<%= student._id %>">Delete</a>
+                    <a class="btn btn-info" href="/update-student/<%= student._id %>">Edit</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
